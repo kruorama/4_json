@@ -1,6 +1,6 @@
 # Prettify JSON
+Takes a path to a JSON file as an argument and displays it in a readable way
 
-[TODO. There will be project description]
 
 # Quickstart
 
@@ -11,7 +11,10 @@ Example of script launch on Linux, Python 3.5:
 ```bash
 
 $ python pprint_json.py <path to file>
-# TODO add output example
+{
+    "foo": "lorem",
+    "bar": "ipsum"
+}
 
 ```
 
