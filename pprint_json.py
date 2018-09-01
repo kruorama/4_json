@@ -13,8 +13,9 @@ def load_data(filepath):
 json_decoded = load_data(filepath)
 
 
-def pretty_print_json(data):
-    print(json.dumps(data, indent=4, ensure_ascii=False))
+def pretty_print_json(json_decoded):
+    print(json.dumps(json_decoded, indent=4, ensure_ascii=False))
 
 
-pretty_print_json(json_decoded)
+if __name__ == '__main__':
+    pretty_print_json(json_decoded)
