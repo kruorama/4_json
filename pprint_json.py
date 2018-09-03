@@ -2,16 +2,17 @@ import json
 import sys
 
 
-if len(sys.argv) <=1:
-    print('Please add a path to JSON file')
-    exit()
+def get_filepath():
+    if len(sys.argv) <= 1:
+        print('Please add a path to JSON file')
+        exit()
 
-filepath = sys.argv[1]
+    filepath = sys.argv[1]
+    if filepath.split(".")[-1] != "json":
+            print("It's not a JSON")
+            exit()
 
-
-if filepath.split(".")[-1] != "json":
-    print("It's not a JSON")
-    exit()
+    return filepath
 
 
 def load_data(filepath):
@@ -19,13 +20,13 @@ def load_data(filepath):
         return json.load(file_handler)
 
 
-json_decoded = load_data(filepath)
-
-
 def pretty_print_json(json_decoded):
+    json_decoded = load_data(filepath)
     print(json.dumps(json_decoded,
-            indent=4, ensure_ascii=False))
+                    indent=4, ensure_ascii=False))
 
 
 if __name__ == '__main__':
+    filepath = get_filepath()
+    json_decoded = load_data(filepath)
     pretty_print_json(json_decoded)
