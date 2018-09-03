@@ -4,8 +4,6 @@ Takes a path to a JSON file as an argument and displays it in a readable way
 
 # Quickstart
 
-[TODO]
-
 Example of script launch on Linux, Python 3.5:
 
 ```bash
