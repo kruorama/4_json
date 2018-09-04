@@ -9,10 +9,7 @@ def pretty_print_json(filepath):
             json_decoded = json.load(file_handler)
     except json.decoder.JSONDecodeError:
         return None
-    """
-    with open(filepath, 'r') as file_handler:
-            json_decoded = json.load(file_handler)
-    """
+
     pretty_json = json.dumps(json_decoded, indent=4, ensure_ascii=False)
     return pretty_json
 
