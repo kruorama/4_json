@@ -5,11 +5,11 @@ import sys
 def load_json(filepath):
     try:
         with open(filepath, 'r') as file_handler:
-            return (None, json.load(file_handler)
+            return None, json.load(file_handler)
     except json.decoder.JSONDecodeError:
-        return ('parse error', None)
+        return 'parse error', None
     except FileNotFoundError:
-        return ('no such file', None)
+        return 'no such file', None
 
 
 def pretty_print_json(json_decoded):

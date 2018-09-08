@@ -1,5 +1,5 @@
 # Prettify JSON
-Takes a path to a JSON file as an argument and displays it in a readable way
+Takes a path to a JSON file as an argument and displays it in a readable way.
 
 
 # Quickstart
