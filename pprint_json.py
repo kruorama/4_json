@@ -12,7 +12,7 @@ def load_json(filepath):
         return 'no such file', None
 
 
-def pretty_print_json(json_decoded):
+def get_pretty_json(json_decoded):
     pretty_json = json.dumps(json_decoded, indent=4, ensure_ascii=False)
     return pretty_json
 
@@ -24,6 +24,6 @@ if __name__ == '__main__':
     error, json_decoded = load_json(sys.argv[1])
 
     if json_decoded is None:
-        print('Error: ' + error)
+        print('Error: {}'.format(error))
     else:
-        print(pretty_print_json(json_decoded))
+        print(get_pretty_json(json_decoded))
